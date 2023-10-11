@@ -1,0 +1,118 @@
+@import "https://unpkg.com/open-props";
+@font-face {
+  font-family: 'Guttever'; /* Assign a name to be used in CSS */
+  src: url('fonts/Guttever Bold.otf') format('opentype'); /* Path to your .otf file and its format */
+}
+* {
+  box-sizing: border-box;
+}
+#title {
+  font-family: 'Guttever', sans-serif;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-spacing: 10px;
+  margin-bottom: -25px;
+  line-height: 1.3;
+}
+#subtitle {
+  font-family: 'Guttever', sans-serif;
+  font-size: 30px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  word-spacing: 10px;
+  margin-bottom: 50px;
+}
+
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-gap: 0.25rem;
+  place-content: center;
+
+  font-family: var(--font-mono);
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);  
+}
+
+#timer {
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  color: #e7ebef;
+  padding: var(--size-4) var(--size-6);
+  font-size: 2rem;
+  border: 1px solid #384657;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  text-align: center;
+}
+#notes {
+  margin-top: 50px;
+}
+
+#boiling-time-input {
+  background-color: #D9AFD9;
+  background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+  color: #e7ebef;
+  padding: var(--size-4) var(--size-6);
+  font-size: 2rem;
+  border: 1px solid #0396FF;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  text-align: center;
+  width: 100%; /* Ensure it takes full width */
+  outline: none; /* Remove the default outline */
+  box-sizing: border-box; /* Ensure padding does not increase the total width */
+}
+
+#boiling-time-input::placeholder {
+  color: #737c84; /* Lighter color for placeholder text */
+  opacity: 1; /* Fully opaque */
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+}
+
+.button-group > * {
+  flex-basis: 100%;
+}
+
+button {
+  font: inherit;
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #0396FF;
+  border-radius: var(--radius-2);
+  cursor: pointer;
+}
+
+button:is(:hover, :focus-visible) {
+  background-color: #0396FF;
+}
+#attribution {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+#attribution a {
+  text-decoration: none;
+  color: #0396FF; /* GitHub's link color, or you can choose any color you like */
+}
+
+#attribution a:hover {
+  text-decoration: underline;
+}
